@@ -74,4 +74,5 @@ describe('Career page',function(){
             expect(location.toUpperCase()).to.include('Debrecen'.toUpperCase())
             expect(applyButton).not.to.be.undefined
         }
-    
+     });
+});
