@@ -1,9 +1,9 @@
 const BasePage = require('./BasePage.js')
 const {By,until} = require('selenium-webdriver')
+const EC = protractor.ExpectedConditions;
 module.exports=class CareerPage extends BasePage {
     constructor() {
         super()
-        this.driver = this.driver.build()
         this.locators = {
             css: {
                 locationSearch: '.select2-selection__rendered',
@@ -20,30 +20,39 @@ module.exports=class CareerPage extends BasePage {
         }
 
     }
+    isLoaded = async function(){
+            const isFindBtnDisplayed = await element(by.css(this.locators.css.findBtn)).isPresent()
+            return isFindBtnDisplayed
+    }
+
+    isJobApplyFormPresent = async function(){
+       const isApplyFormPresent= await element(by.css(this.locators.css.jobSearchForm)).isPresent()
+        return isApplyFormPresent
+    }
     getCountrySelector(counry){
         return `li[aria-label='${counry}']`
     }
     getCitySelector(city){
-        return `li[id$='${city}']`
+        return `option[value='${city}']`
     }
     getSkillLocator(skill){
         return `input[data-value='${skill}']`
     }
-    getSearchResults = async function (page){
-        const searchResults =await page.driver.wait(until.elementsLocated(By.css(this.locators.css.searchResults)),10000)
-        return searchResults
+    getSearchResults = async function (){
+        return await element.all(by.css(this.locators.css.searchResults))
     }
-    getResultList = async function(page){
-        const resultList = await page.driver.wait(until.elementLocated(By.css(this.locators.css.searchResultList)),10000)
+    getResultList = async function(){
+        await browser.wait(EC.presenceOf(element(by.css(this.locators.css.searchResultList))), 5000);
+        const resultList = await element(by.css(this.locators.css.searchResultList))
         return resultList
     }
  
     getMatchedResults = async function(resultList,position){
-        const matchedPositions = await resultList.findElements(By.xpath(`//li[contains(@class, search-result__item) and contains(string(),"${position}") ]`))
+        const matchedPositions = await resultList.all(by.xpath(`//li[contains(@class, search-result__item) and contains(string(),"${position}") ]`))
         return matchedPositions
     }
     getLocation=async function(result){
-        const location = await result.findElement(By.css(this.locators.css.searchResultLocation)).getText()
+        const location = await element(by.css(this.locators.css.searchResultLocation)).getText()
         return location
     }
 
