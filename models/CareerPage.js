@@ -1,5 +1,6 @@
 const BasePage = require('./BasePage.js')
-const {By,until} = require('selenium-webdriver')
+const {By,until} = require('selenium-webdriver');
+const { browser } = require('protractor');
 const EC = protractor.ExpectedConditions;
 module.exports=class CareerPage extends BasePage {
     constructor() {
@@ -46,6 +47,19 @@ module.exports=class CareerPage extends BasePage {
         const resultList = await element(by.css(this.locators.css.searchResultList))
         return resultList
     }
+    selectCity = async function(city){
+        
+        await browser.executeScript(`document.querySelector('option[value*="${city}"]').selected = true`)
+    }
+
+    selectSkill = async function(skill){
+        browser.executeScript(`document.querySelector("${this.getSkillLocator(skill)}").click()`);
+        
+
+
+    }
+
+
  
     getMatchedResults = async function(resultList,position){
         const matchedPositions = await resultList.all(by.xpath(`//li[contains(@class, search-result__item) and contains(string(),"${position}") ]`))

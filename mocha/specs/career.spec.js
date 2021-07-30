@@ -42,19 +42,23 @@ describe('Career page',function(){
         browser.wait(EC.presenceOf(element(by.css(page.getCitySelector("Debrecen")))), 5000);
         const isCityPresent = await element(by.css(page.getCitySelector("Debrecen"))).isPresent();
         expect(isCityPresent).to.be.true;
-        browser.executeScript(`document.querySelector("${page.getCitySelector("Debrecen")}").setAttribute("selected","true")`);
+        page.selectCity('Debrecen');
      });
 
      it('Should have a way to select a skill', async function () {
         const page = this.page;
         const isSkillSelectPresent = await element(by.css(page.locators.css.skills)).isPresent();
-      
         expect(isSkillSelectPresent).to.be.true;
-        browser.executeScript(`document.querySelector("${page.getSkillLocator('Software Test Engineering')}").click()`);
         const findBtn = await element(by.css(this.page.locators.css.findBtn));
         findBtn.click();
-      
      });
+
+     it('Should be able to select a specific skill', async function () {
+      const page = this.page;
+      page.selectSkill('Software Test Engineering')
+      const findBtn = await element(by.css(this.page.locators.css.findBtn));
+      findBtn.click();
+   });
 
      it('Search result should contain the given position', async function () {
         const page = this.page;
@@ -62,14 +66,19 @@ describe('Career page',function(){
         this.matchedPositions = await page.getMatchedResults(resultList,'Lead Test Automation Engineer');
         expect(this.matchedPositions).has.length.greaterThan(0);
      });
+     it('Every position should have correct location', async function () {
+      const page = this.page;
+      for (let element of this.matchedPositions){
+          const location = await page.getLocation(element);
+          expect(location.toUpperCase()).to.include('Debrecen'.toUpperCase());
+      }
+   });
 
      it('Every position should have an apply button', async function () {
         const page = this.page;
         for (let element of this.matchedPositions){
-            const location = await page.getLocation(element);
-            const applyButton = await element.element(by.css(page.locators.css.applyBtn));
-            expect(location.toUpperCase()).to.include('Debrecen'.toUpperCase());
-            expect(applyButton).not.to.be.undefined;
+            const applyButton = await element.element(by.css(page.locators.css.applyBtn)).isPresent();
+            expect(applyButton).to.be.true;
         }
      });
 });
