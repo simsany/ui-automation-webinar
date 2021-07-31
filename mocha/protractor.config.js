@@ -16,7 +16,6 @@ exports.config = {
     onPrepare: async function () {
         global.GLOBAL_TIMEOUT = GLOBAL_TIMEOUT;
         global.ec = protractor.ExpectedConditions;
-
         const chai = require('chai');
         chai.use(require('chai-as-promised'));
         global.expect = chai.expect;

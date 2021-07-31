@@ -60,7 +60,7 @@ module.exports=class CareerPage extends BasePage {
     
  
     getMatchedResults = async function(resultList,position){
-        const matchedPositions = await resultList.all(by.xpath(`//li[contains(@class, search-result__item) and contains(string(),"${position}") ]`))
+        const matchedPositions = await resultList.all(by.cssContainingText('.search-result__item' ,position))
         return matchedPositions
     }
     getLocation=async function(result){
