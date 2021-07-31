@@ -17,15 +17,15 @@ describe('Career page',function(){
     /* itt csak írtam egy kis függvényt hogy csináljon fotót
         majd a fájl útját meg a név megválasztást még át kell gondolni*/
 
-    // afterEach(async function(){
-    //     if(this.currentTest.state == 'failed'){
-    //     let image = await this.driver.takeScreenshot()
-    //     write(`C:/api/out${Math.random()}.png`, image, 'base64', (err) => {
-    //             if (err) { console.log(err); };
-    //         });
-    //     }
+    afterEach(async function(){
+        if(this.currentTest.state == 'failed'){
+        let image = await browser.takeScreenshot()
+        write(`C:/api/out${Math.random()}.png`, image, 'base64', (err) => {
+                if (err) { console.log(err); };
+            });
+        }
         
-    // })
+    })
     it('should load',async function () {
         await browser.get(careerPageUrl);
         expect(await this.page.isLoaded()).to.be.true;
@@ -33,30 +33,30 @@ describe('Career page',function(){
 
     it('search form should be reachable', async function () {
         const page = this.page;
-        expect(await page.isJobApplyFormPresent()).to.be.true;
+        const isFormPresent = await page.isCareerPresent("jobSearchForm")
+        console.log(isFormPresent)
+        expect(isFormPresent).to.be.true;
      });
 
      it('The location filter box should contain City', async function () {
         const page = this.page;
-        await page.click(page.locators.css.locationSearch);
-        browser.wait(EC.presenceOf(element(by.css(page.getCitySelector("Debrecen")))), 5000);
-        const isCityPresent = await element(by.css(page.getCitySelector("Debrecen"))).isPresent();
+        await page.click(page.locators.locationSearch.css);
+        const isCityPresent = await page.isCareerPresent("citySelector","Debrecen")
         expect(isCityPresent).to.be.true;
         page.selectCity('Debrecen');
      });
 
      it('Should have a way to select a skill', async function () {
         const page = this.page;
-        const isSkillSelectPresent = await element(by.css(page.locators.css.skills)).isPresent();
+        const isSkillSelectPresent = await page.isCareerPresent("skills")
         expect(isSkillSelectPresent).to.be.true;
-        const findBtn = await element(by.css(this.page.locators.css.findBtn));
-        findBtn.click();
+        
      });
 
      it('Should be able to select a specific skill', async function () {
       const page = this.page;
-      page.selectSkill('Software Test Engineering')
-      const findBtn = await element(by.css(this.page.locators.css.findBtn));
+      await page.selectSkill('Software Test Engineering')
+      const findBtn = await element(this.page.locators.findBtn);
       findBtn.click();
    });
 
@@ -77,8 +77,9 @@ describe('Career page',function(){
      it('Every position should have an apply button', async function () {
         const page = this.page;
         for (let element of this.matchedPositions){
-            const applyButton = await element.element(by.css(page.locators.css.applyBtn)).isPresent();
+            const applyButton = await page.hasElement(element,page.locators.applyBtn)
             expect(applyButton).to.be.true;
         }
      });
+     
 });
