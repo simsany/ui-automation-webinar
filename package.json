@@ -20,5 +20,8 @@
     "protractor-cucumber-framework": "^6.2.1",
     "require-it": "^2.0.0",
     "selenium-webdriver": "^3.6.0"
+  },
+  "devDependencies": {
+    "fs-extra": "^10.0.0"
   }
 }

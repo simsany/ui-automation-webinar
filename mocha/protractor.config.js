@@ -5,7 +5,7 @@ const GLOBAL_TIMEOUT = 40e3;
 exports.config = {
     specs: 'specs/**/*.spec.js',
     capabilities: {
-        browserName: 'chrome'
+        browserName: 'chrome',
     },
     directConnect: true,
     mochaOpts: {

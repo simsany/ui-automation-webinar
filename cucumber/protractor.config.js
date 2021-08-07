@@ -1,6 +1,6 @@
 'use strict';
 
-const GLOBAL_TIMEOUT = 40e3;
+const GLOBAL_TIMEOUT = 20e3;
 
 exports.config = {
     specs: 'features/**/*.feature',
