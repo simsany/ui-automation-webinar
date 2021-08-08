@@ -8,12 +8,19 @@ module.exports = class BasePage {
             return this
         }
         this.click = async function (locator) {
-            await browser.executeScript(`document.querySelector("${locator.css}").scrollIntoView()`)
-            element(locator).click()
+            
+            await browser.actions().mouseMove(element(locator)).perform();
+             try{
+                await element(locator).click()
+            }
+             catch(e){
+                
+            await browser.executeScript(`document.querySelector("${locator.css}").click()`)
+            }
             return this
         }
         this.sendText = async function (locator, text) {
-            await browser.executeScript(`document.querySelector("${locator.css}").scrollIntoView()`)
+            await browser.actions().mouseMove(element(locator)).perform();
             const input = await element(locator)
             input.click()
             await input.clear()

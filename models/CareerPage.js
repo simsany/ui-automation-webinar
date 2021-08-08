@@ -25,8 +25,7 @@ module.exports = class CareerPage extends BasePage {
                  return { css: `li[id*=${city}]` }
             },
             skillLocator: function(skill){
-                return { xpath: `//li[descendant::span[contains(text(),"${skill}")]]`
-                 }
+                return { css: `input[data-value*='${skill}']`}
             },
             cityListSelector: function(country){
                 return {css: `li[aria-label*="${country}"].select2-results__option.dropdown-cities ul`}
