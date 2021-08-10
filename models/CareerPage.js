@@ -1,79 +1,58 @@
 const BasePage = require('./BasePage.js')
-const { By, until } = require('selenium-webdriver');
 const { browser, element } = require('protractor');
-const { protractor } = require('protractor/built/ptor');
-const EC = protractor.ExpectedConditions;
+const locators = require("../locators/locators.json")
 module.exports = class CareerPage extends BasePage {
     constructor() {
         super("https://www.epam.com/careers/")
-        this.locators = {
-
-            locationSearch: { css: '.select2-selection__rendered' },
-            skills: { css: '.multi-select-filter .selected-params' },
-            findBtn: { css: '.recruiting-search__submit' },
-            keyword: { css: '#new_form_job_search-keyword' },
-            jobSearchForm: { css: '#jobSearchFilterForm' },
-            searchResults: { css: '.search-result__item' },
-            searchItemName: { css: '.search-result__item-name' },
-            searchResultLocation: { css: '.search-result__location' },
-            applyBtn: { css: '.search-result__item-apply' },
-            searchResultList: { css: '.search-result__list' },
-            countrySelector: function(country){
-                    return { css: `li[aria-label*='${country}']` }
-            },
-            citySelector: function(city){
-                 return { css: `li[id*=${city}]` }
-            },
-            skillLocator: function(skill){
-                return { css: `input[data-value*='${skill}']`}
-            },
-            cityListSelector: function(country){
-                return {css: `li[aria-label*="${country}"].select2-results__option.dropdown-cities ul`}
-            }
-
-        }
     }
-
-    isLoaded = async function(){
-        const isFindBtnDisplayed = await element(this.locators.findBtn).isPresent()
-        return isFindBtnDisplayed
+    getSearchResults = async function () {
+        return await element.all(locators.searchResults)
     }
-    isCareerPresent = async function(locatorName, attribute){
-        const locator = this.locators[locatorName]
-        const careerPresent = attribute ? await element(locator(attribute)).isPresent() :
-        await element(locator).isPresent()
-
-        return careerPresent
-    }
-
-
-    getSearchResults = async function(){
-        return await element.all(this.locators.searchResults)
-    }
-    getResultList = async function(){
-        const resultList = await element(this.locators.searchResultList)
+    getResultList = async function () {
+        const resultList = await element(locators.searchResultList)
         return resultList
     }
     selectCity = async (city) => {
-        await element(this.locators.citySelector(city)).click()
+        await element(this.citySelector(city)).click()
     }
 
-    selectSkill = async function(skill){
-        browser.executeScript(`document.querySelector("${this.locators.skillLocator(skill).css}").click()`);
+    selectSkill = async function (skill) {
+        await element(this.skillLocator(skill)).click()
     }
 
-
-    getMatchedResults = async (resultList, position) => {
-        const matchedPositions = await resultList.all(by.cssContainingText('.search-result__item', position));
-        return matchedPositions;
-    }
-    getLocation = async function(result){
-        const location = await result.element(this.locators.searchResultLocation).getText()
+    getLocation = async function (result) {
+        const location = await result.element(locators.searchResultLocation).getText()
         return location
     }
-    hasElement = async (el, locator) => {
-        const containsElement = await el.element(locator).isPresent();
-        return containsElement;
+
+    countrySelector(country) {
+        return { css: `li[aria-label*='${country}']` }
+    }
+    citySelector(city) {
+        return { css: `li[id*=${city}]` }
+    }
+    skillLocator(skill) {
+        return { xpath: `//label[input[@data-value='${skill}']]` }
+    }
+    cityListSelector(country) {
+        return { css: `li[aria-label*="${country}"].select2-results__option.dropdown-cities ul` }
+    }
+    getCityListText(country) {
+        return element(this.cityListSelector(country)).getText()
+    }
+    isLocationExpanded = async function () {
+        const dropDown = await element(by.css(".select2-selection.select2-selection--single"))
+        const isExpanded = await dropDown.getAttribute('aria-expanded')
+        return isExpanded
+    }
+    getSelectionText = async function () {
+        const selection = await element(by.css('.select2-selection__rendered'))
+        return selection.getText()
+    }
+    isDepartmentChecked = async function (department) {
+        const departmentCheckbox = await element(by.css(`input[type='checkbox'][data-value='${department}']`))
+        const isChecked = await departmentCheckbox.getAttribute('checked')
+        return isChecked
     }
 }
 

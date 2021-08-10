@@ -1,0 +1,39 @@
+{
+    "footerLinks": {
+      "css": ".footer__links"
+    },
+    "locationSearch": {
+      "css": ".select2-selection__rendered"
+    },
+    "skills": {
+      "css": ".multi-select-filter .selected-params"
+    },
+    "findBtn": {
+      "css": ".recruiting-search__submit"
+    },
+    "keyword": {
+      "css": "#new_form_job_search-keyword"
+    },
+    "jobSearchForm": {
+      "css": "#jobSearchFilterForm"
+    },
+    "searchResults": {
+      "css": ".search-result__item"
+    },
+    "searchItemName": {
+      "css": ".search-result__item-name"
+    },
+    "searchResultLocation": {
+      "css": ".search-result__location"
+    },
+    "applyBtn": {
+      "css": ".search-result__item-apply"
+    },
+    "searchResultList": {
+      "css": ".search-result__list"
+    },
+
+    "departmentDropdown":{
+      "css": ".multi-select-dropdown"
+    }
+  }
