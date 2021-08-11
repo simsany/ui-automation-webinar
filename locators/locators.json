@@ -8,7 +8,7 @@
     "skills": {
       "css": ".multi-select-filter .selected-params"
     },
-    "findBtn": {
+    "find": {
       "css": ".recruiting-search__submit"
     },
     "keyword": {
@@ -26,7 +26,7 @@
     "searchResultLocation": {
       "css": ".search-result__location"
     },
-    "applyBtn": {
+    "apply": {
       "css": ".search-result__item-apply"
     },
     "searchResultList": {

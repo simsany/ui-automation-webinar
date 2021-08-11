@@ -11,7 +11,8 @@ let matchedPositions;
 setDefaultTimeout(GLOBAL_TIMEOUT);
 
 Given('I navigate to the career page',
-  async () => {
+  async (a) => {
+    console.log(a.rows())
     careerPage.get();
     try {
       await browser.wait(ec.visibilityOf((element(by.css('.cookie-disclaimer__button')))), 5000);
@@ -36,12 +37,11 @@ Then('I want to see the city: {string} in the list', async (city) => {
     await browser.wait(ec.presenceOf(element(careerPage.citySelector(city)), 5000));
     return expect(element(careerPage.citySelector(city)).isPresent()).eventually.to.be.true;
   });
-When('I click on the country: {string}', async (country) => await careerPage.click(careerPage.countrySelector(country)));
+When(/I click on the (country|city): \"(\w+)\"/, async (locationType,location) => await careerPage.click(careerPage[locationType+"Selector"](location)));
 Then('the {string}\'s city list gets visible', (country) => expect(browser.wait(ec.visibilityOf(element(careerPage.cityListSelector(country))), 5000)).eventually.to.be.true);
 Then('the {string}\'s city list contains {string}',(country, city) => {
   return expect(careerPage.getCityListText(country)).eventually.to.match(new RegExp(`${city}`))
 });
-When('I click on the city: {string} label', async (city) => await careerPage.selectCity(city));
 Then('the dropdown menu closes', () => expect(careerPage.isLocationExpanded()).eventually.to.be.equal('false'));
 Then('the {string} name is shown in the location field', async (city) => expect(careerPage.getSelectionText()).eventually.to.be.equal(city));
 When('I click on the Skills filter box', async () => await careerPage.click(locators.skills));
@@ -49,7 +49,7 @@ Then('I want to see the available departments', () => expect(browser.wait(ec.vis
 Then('I want to see the given department: {string}', (skill) => expect(browser.wait(ec.visibilityOf(element(careerPage.skillLocator(skill))))).eventually.to.be.true);
 When('I click on the department: {string}\'s label', async (skill) => await careerPage.click(careerPage.skillLocator(skill)));
 Then('I want the {string}\'s checkbox to be checked', department => expect(careerPage.isDepartmentChecked(department)).eventually.to.be.equal('true'));
-When('I click on the button: find button', async () => await careerPage.click(locators.findBtn));
+When(/I click on the (find|apply) button/, async (button) => await careerPage.click(locators[button]));
 Then('I want to see the job listing page', async () => {
     await browser.wait(ec.titleIs("Join our Team | EPAM Careers"));
     return expect(browser.getTitle()).eventually.to.be.equal("Join our Team | EPAM Careers");
@@ -74,12 +74,9 @@ Then('I want the position to have the location {string} and {string}',async (cit
   });
 Then('I want the position to have apply button', async () => {
   for (let elem of matchedPositions) {
-    expect(browser.wait(ec.visibilityOf(elem.element(locators.applyBtn)))).eventually.to.be.true;
+    expect(browser.wait(ec.visibilityOf(elem.element(locators.apply)))).eventually.to.be.true;
   }
 });
-When('I click on the apply button', async () => await careerPage.click(locators.applyBtn));
 Then('I want to see the job description page', () => expect(browser.wait(ec.titleContains("Apply Today"))).eventually.to.be.true);
-
 Given('I am on the job description page', () => expect(browser.wait(ec.titleContains("Apply Today"))).eventually.to.be.true);
-Then('I want to see the city: {string} in the job description', (city) => expect(element(by.css('h1')).getText()).eventually.to.include(city));
-Then('I want to see the position: {string} in the job description', (position) => expect(element(by.css('h1')).getText()).eventually.to.include(position));
+Then(/I want to see the (?:city|position): \"([\w\s]+)\" in the job description/, (example) => expect(element(by.css('h1')).getText()).eventually.to.include(example));

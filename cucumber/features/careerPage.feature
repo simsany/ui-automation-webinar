@@ -2,7 +2,7 @@ Feature: EPAM job searching
   As a Job searcher
   I want to browser through EPAM Job offers by various criteria
   So I can find to best fitting offer for me
-  @alma
+
   Scenario Outline: I search for a job
 
     Given I navigate to the career page
@@ -18,7 +18,7 @@ Feature: EPAM job searching
     Then the "<country>"'s city list gets visible
     And the "<country>"'s city list contains "<city>"
 
-    When I click on the city: "<city>" label
+    When I click on the city: "<city>"
     Then the dropdown menu closes
     And the "<city>" name is shown in the location field
 
@@ -29,10 +29,10 @@ Feature: EPAM job searching
     When I click on the department: "<department>"'s label
     Then I want the "<department>"'s checkbox to be checked
 
-    When I click on the button: find button
+    When I click on the find button
     Then I want to see the job listing page
-    
-    Given I am on the job listing page 
+
+    Given I am on the job listing page
     Then I want "<position>" to be listed
     And I want the position to have the location "<city>" and "<country>"
     And I want the position to have apply button
