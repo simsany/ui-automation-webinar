@@ -11,7 +11,7 @@ let matchedPositions;
 setDefaultTimeout(GLOBAL_TIMEOUT);
 
 Given('I navigate to the career page',
-  async (a) => {
+  async () => {
     console.log(a.rows())
     careerPage.get();
     try {
