@@ -4,15 +4,17 @@ const GLOBAL_TIMEOUT = 20e3;
 
 exports.config = {
     specs: 'features/**/*.feature',
-    capabilities: {
-        browserName: 'chrome'
-    },
+    multiCapabilities: [
+        {'browserName': 'chrome' }, 
+        {'browserName': 'chrome'}
+    ],
     directConnect: true,
     cucumberOpts: {
         require: ['./step_definitions/**/*.js'],
         tags: ['~@wip'],
         format: ['progress', 'json:cucumber.json']
     },
+
     framework: 'custom',
     frameworkPath: require.resolve('protractor-cucumber-framework'),
     getPageTimeout: GLOBAL_TIMEOUT,

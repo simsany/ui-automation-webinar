@@ -1,0 +1,1508 @@
+[
+  {
+    "description": "  As a Job searcher\n  I want to browser through EPAM Job offers by various criteria\n  So I can find to best fitting offer for me",
+    "keyword": "Feature",
+    "name": "EPAM job searching",
+    "line": 1,
+    "id": "epam-job-searching",
+    "tags": [],
+    "uri": "cucumber\\features\\careerPage copy.feature",
+    "elements": [
+      {
+        "id": "epam-job-searching;i-search-for-a-job",
+        "keyword": "Scenario",
+        "line": 52,
+        "name": "I search for a job",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "I navigate to the career page",
+            "match": {
+              "location": "cucumber\\step_definitions\\careerPage.js:13"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 36000000,
+              "error_message": "ReferenceError: a is not defined\n    at World.<anonymous> (C:\\mep_ui\\ui-automation-webinar\\cucumber\\step_definitions\\careerPage.js:15:17)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 9,
+            "name": "I want to see the career page",
+            "match": {
+              "location": "cucumber\\step_definitions\\careerPage.js:25"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 10,
+            "name": "I want to see the search form",
+            "match": {
+              "location": "cucumber\\step_definitions\\careerPage.js:27"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 12,
+            "name": "I am on the career page",
+            "match": {
+              "location": "cucumber\\step_definitions\\careerPage.js:29"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 13,
+            "name": "I click on the Location filter box",
+            "match": {
+              "location": "cucumber\\step_definitions\\careerPage.js:30"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 14,
+            "name": "I want to see the country: \"Hungary\" in the list",
+            "match": {
+              "location": "cucumber\\step_definitions\\careerPage.js:31"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 15,
+            "name": "I want to see the city: \"Debrecen\" in the list",
+            "match": {
+              "location": "cucumber\\step_definitions\\careerPage.js:36"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 17,
+            "name": "I click on the country: \"Hungary\"",
+            "match": {
+              "location": "cucumber\\step_definitions\\careerPage.js:40"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 18,
+            "name": "the \"Hungary\"'s city list gets visible",
+            "match": {
+              "location": "cucumber\\step_definitions\\careerPage.js:41"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 19,
+            "name": "the \"Hungary\"'s city list contains \"Debrecen\"",
+            "match": {
+              "location": "cucumber\\step_definitions\\careerPage.js:42"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 21,
+            "name": "I click on the city: \"Debrecen\"",
+            "match": {
+              "location": "cucumber\\step_definitions\\careerPage.js:40"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 22,
+            "name": "the dropdown menu closes",
+            "match": {
+              "location": "cucumber\\step_definitions\\careerPage.js:45"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 23,
+            "name": "the \"Debrecen\" name is shown in the location field",
+            "match": {
+              "location": "cucumber\\step_definitions\\careerPage.js:46"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 25,
+            "name": "I click on the Skills filter box",
+            "match": {
+              "location": "cucumber\\step_definitions\\careerPage.js:47"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 26,
+            "name": "I want to see the available departments",
+            "match": {
+              "location": "cucumber\\step_definitions\\careerPage.js:48"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 27,
+            "name": "I want to see the given department: \"Software Test Engineering\"",
+            "match": {
+              "location": "cucumber\\step_definitions\\careerPage.js:49"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 29,
+            "name": "I click on the department: \"Software Test Engineering\"'s label",
+            "match": {
+              "location": "cucumber\\step_definitions\\careerPage.js:50"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 30,
+            "name": "I want the \"Software Test Engineering\"'s checkbox to be checked",
+            "match": {
+              "location": "cucumber\\step_definitions\\careerPage.js:51"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 32,
+            "name": "I click on the find button",
+            "match": {
+              "location": "cucumber\\step_definitions\\careerPage.js:52"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 33,
+            "name": "I want to see the job listing page",
+            "match": {
+              "location": "cucumber\\step_definitions\\careerPage.js:53"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 35,
+            "name": "I am on the job listing page",
+            "match": {
+              "location": "cucumber\\step_definitions\\careerPage.js:58"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 36,
+            "name": "I want \"Lead Test Automation Engineer\" to be listed",
+            "match": {
+              "location": "cucumber\\step_definitions\\careerPage.js:62"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 37,
+            "name": "I want the position to have the location \"Debrecen\" and \"Hungary\"",
+            "match": {
+              "location": "cucumber\\step_definitions\\careerPage.js:68"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 38,
+            "name": "I want the position to have apply button",
+            "match": {
+              "location": "cucumber\\step_definitions\\careerPage.js:75"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 40,
+            "name": "I click on the apply button",
+            "match": {
+              "location": "cucumber\\step_definitions\\careerPage.js:52"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 41,
+            "name": "I want to see the job description page",
+            "match": {
+              "location": "cucumber\\step_definitions\\careerPage.js:80"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 43,
+            "name": "I am on the job description page",
+            "match": {
+              "location": "cucumber\\step_definitions\\careerPage.js:81"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 44,
+            "name": "I want to see the city: \"Debrecen\" in the job description",
+            "match": {
+              "location": "cucumber\\step_definitions\\careerPage.js:82"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 45,
+            "name": "I want to see the position: \"Lead Test Automation Engineer\" in the job description",
+            "match": {
+              "location": "cucumber\\step_definitions\\careerPage.js:82"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "node_modules\\protractor-cucumber-framework\\lib\\resultsCapturer.js:27"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 11000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "epam-job-searching;i-search-for-a-job",
+        "keyword": "Scenario",
+        "line": 53,
+        "name": "I search for a job",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "I navigate to the career page",
+            "match": {
+              "location": "cucumber\\step_definitions\\careerPage.js:13"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 14000000,
+              "error_message": "ReferenceError: a is not defined\n    at World.<anonymous> (C:\\mep_ui\\ui-automation-webinar\\cucumber\\step_definitions\\careerPage.js:15:17)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 9,
+            "name": "I want to see the career page",
+            "match": {
+              "location": "cucumber\\step_definitions\\careerPage.js:25"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 10,
+            "name": "I want to see the search form",
+            "match": {
+              "location": "cucumber\\step_definitions\\careerPage.js:27"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 12,
+            "name": "I am on the career page",
+            "match": {
+              "location": "cucumber\\step_definitions\\careerPage.js:29"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 13,
+            "name": "I click on the Location filter box",
+            "match": {
+              "location": "cucumber\\step_definitions\\careerPage.js:30"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 14,
+            "name": "I want to see the country: \"Belarus\" in the list",
+            "match": {
+              "location": "cucumber\\step_definitions\\careerPage.js:31"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 15,
+            "name": "I want to see the city: \"Minsk\" in the list",
+            "match": {
+              "location": "cucumber\\step_definitions\\careerPage.js:36"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 17,
+            "name": "I click on the country: \"Belarus\"",
+            "match": {
+              "location": "cucumber\\step_definitions\\careerPage.js:40"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 18,
+            "name": "the \"Belarus\"'s city list gets visible",
+            "match": {
+              "location": "cucumber\\step_definitions\\careerPage.js:41"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 19,
+            "name": "the \"Belarus\"'s city list contains \"Minsk\"",
+            "match": {
+              "location": "cucumber\\step_definitions\\careerPage.js:42"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 21,
+            "name": "I click on the city: \"Minsk\"",
+            "match": {
+              "location": "cucumber\\step_definitions\\careerPage.js:40"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 22,
+            "name": "the dropdown menu closes",
+            "match": {
+              "location": "cucumber\\step_definitions\\careerPage.js:45"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 23,
+            "name": "the \"Minsk\" name is shown in the location field",
+            "match": {
+              "location": "cucumber\\step_definitions\\careerPage.js:46"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 25,
+            "name": "I click on the Skills filter box",
+            "match": {
+              "location": "cucumber\\step_definitions\\careerPage.js:47"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 26,
+            "name": "I want to see the available departments",
+            "match": {
+              "location": "cucumber\\step_definitions\\careerPage.js:48"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 27,
+            "name": "I want to see the given department: \"Software Architecture\"",
+            "match": {
+              "location": "cucumber\\step_definitions\\careerPage.js:49"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 29,
+            "name": "I click on the department: \"Software Architecture\"'s label",
+            "match": {
+              "location": "cucumber\\step_definitions\\careerPage.js:50"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 30,
+            "name": "I want the \"Software Architecture\"'s checkbox to be checked",
+            "match": {
+              "location": "cucumber\\step_definitions\\careerPage.js:51"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 32,
+            "name": "I click on the find button",
+            "match": {
+              "location": "cucumber\\step_definitions\\careerPage.js:52"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 33,
+            "name": "I want to see the job listing page",
+            "match": {
+              "location": "cucumber\\step_definitions\\careerPage.js:53"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 35,
+            "name": "I am on the job listing page",
+            "match": {
+              "location": "cucumber\\step_definitions\\careerPage.js:58"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 36,
+            "name": "I want \"Test Automation Architect\" to be listed",
+            "match": {
+              "location": "cucumber\\step_definitions\\careerPage.js:62"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 37,
+            "name": "I want the position to have the location \"Minsk\" and \"Belarus\"",
+            "match": {
+              "location": "cucumber\\step_definitions\\careerPage.js:68"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 38,
+            "name": "I want the position to have apply button",
+            "match": {
+              "location": "cucumber\\step_definitions\\careerPage.js:75"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 40,
+            "name": "I click on the apply button",
+            "match": {
+              "location": "cucumber\\step_definitions\\careerPage.js:52"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 41,
+            "name": "I want to see the job description page",
+            "match": {
+              "location": "cucumber\\step_definitions\\careerPage.js:80"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 43,
+            "name": "I am on the job description page",
+            "match": {
+              "location": "cucumber\\step_definitions\\careerPage.js:81"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 44,
+            "name": "I want to see the city: \"Minsk\" in the job description",
+            "match": {
+              "location": "cucumber\\step_definitions\\careerPage.js:82"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 45,
+            "name": "I want to see the position: \"Test Automation Architect\" in the job description",
+            "match": {
+              "location": "cucumber\\step_definitions\\careerPage.js:82"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "node_modules\\protractor-cucumber-framework\\lib\\resultsCapturer.js:27"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4000000
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "  As a Job searcher\n  I want to browser through EPAM Job offers by various criteria\n  So I can find to best fitting offer for me",
+    "keyword": "Feature",
+    "name": "EPAM job searching",
+    "line": 1,
+    "id": "epam-job-searching",
+    "tags": [],
+    "uri": "cucumber\\features\\careerPage.feature",
+    "elements": [
+      {
+        "id": "epam-job-searching;i-search-for-a-job",
+        "keyword": "Scenario",
+        "line": 52,
+        "name": "I search for a job",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "I navigate to the career page",
+            "match": {
+              "location": "cucumber\\step_definitions\\careerPage.js:13"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 1000000,
+              "error_message": "ReferenceError: a is not defined\n    at World.<anonymous> (C:\\mep_ui\\ui-automation-webinar\\cucumber\\step_definitions\\careerPage.js:15:17)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 9,
+            "name": "I want to see the career page",
+            "match": {
+              "location": "cucumber\\step_definitions\\careerPage.js:25"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 10,
+            "name": "I want to see the search form",
+            "match": {
+              "location": "cucumber\\step_definitions\\careerPage.js:27"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 12,
+            "name": "I am on the career page",
+            "match": {
+              "location": "cucumber\\step_definitions\\careerPage.js:29"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 13,
+            "name": "I click on the Location filter box",
+            "match": {
+              "location": "cucumber\\step_definitions\\careerPage.js:30"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 14,
+            "name": "I want to see the country: \"Hungary\" in the list",
+            "match": {
+              "location": "cucumber\\step_definitions\\careerPage.js:31"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 15,
+            "name": "I want to see the city: \"Debrecen\" in the list",
+            "match": {
+              "location": "cucumber\\step_definitions\\careerPage.js:36"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 17,
+            "name": "I click on the country: \"Hungary\"",
+            "match": {
+              "location": "cucumber\\step_definitions\\careerPage.js:40"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 18,
+            "name": "the \"Hungary\"'s city list gets visible",
+            "match": {
+              "location": "cucumber\\step_definitions\\careerPage.js:41"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 19,
+            "name": "the \"Hungary\"'s city list contains \"Debrecen\"",
+            "match": {
+              "location": "cucumber\\step_definitions\\careerPage.js:42"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 21,
+            "name": "I click on the city: \"Debrecen\"",
+            "match": {
+              "location": "cucumber\\step_definitions\\careerPage.js:40"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 22,
+            "name": "the dropdown menu closes",
+            "match": {
+              "location": "cucumber\\step_definitions\\careerPage.js:45"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 23,
+            "name": "the \"Debrecen\" name is shown in the location field",
+            "match": {
+              "location": "cucumber\\step_definitions\\careerPage.js:46"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 25,
+            "name": "I click on the Skills filter box",
+            "match": {
+              "location": "cucumber\\step_definitions\\careerPage.js:47"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 26,
+            "name": "I want to see the available departments",
+            "match": {
+              "location": "cucumber\\step_definitions\\careerPage.js:48"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 27,
+            "name": "I want to see the given department: \"Software Test Engineering\"",
+            "match": {
+              "location": "cucumber\\step_definitions\\careerPage.js:49"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 29,
+            "name": "I click on the department: \"Software Test Engineering\"'s label",
+            "match": {
+              "location": "cucumber\\step_definitions\\careerPage.js:50"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 30,
+            "name": "I want the \"Software Test Engineering\"'s checkbox to be checked",
+            "match": {
+              "location": "cucumber\\step_definitions\\careerPage.js:51"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 32,
+            "name": "I click on the find button",
+            "match": {
+              "location": "cucumber\\step_definitions\\careerPage.js:52"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 33,
+            "name": "I want to see the job listing page",
+            "match": {
+              "location": "cucumber\\step_definitions\\careerPage.js:53"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 35,
+            "name": "I am on the job listing page",
+            "match": {
+              "location": "cucumber\\step_definitions\\careerPage.js:58"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 36,
+            "name": "I want \"Lead Test Automation Engineer\" to be listed",
+            "match": {
+              "location": "cucumber\\step_definitions\\careerPage.js:62"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 37,
+            "name": "I want the position to have the location \"Debrecen\" and \"Hungary\"",
+            "match": {
+              "location": "cucumber\\step_definitions\\careerPage.js:68"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 38,
+            "name": "I want the position to have apply button",
+            "match": {
+              "location": "cucumber\\step_definitions\\careerPage.js:75"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 40,
+            "name": "I click on the apply button",
+            "match": {
+              "location": "cucumber\\step_definitions\\careerPage.js:52"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 41,
+            "name": "I want to see the job description page",
+            "match": {
+              "location": "cucumber\\step_definitions\\careerPage.js:80"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 43,
+            "name": "I am on the job description page",
+            "match": {
+              "location": "cucumber\\step_definitions\\careerPage.js:81"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 44,
+            "name": "I want to see the city: \"Debrecen\" in the job description",
+            "match": {
+              "location": "cucumber\\step_definitions\\careerPage.js:82"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 45,
+            "name": "I want to see the position: \"Lead Test Automation Engineer\" in the job description",
+            "match": {
+              "location": "cucumber\\step_definitions\\careerPage.js:82"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "node_modules\\protractor-cucumber-framework\\lib\\resultsCapturer.js:27"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "epam-job-searching;i-search-for-a-job",
+        "keyword": "Scenario",
+        "line": 53,
+        "name": "I search for a job",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "I navigate to the career page",
+            "match": {
+              "location": "cucumber\\step_definitions\\careerPage.js:13"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 0,
+              "error_message": "ReferenceError: a is not defined\n    at World.<anonymous> (C:\\mep_ui\\ui-automation-webinar\\cucumber\\step_definitions\\careerPage.js:15:17)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 9,
+            "name": "I want to see the career page",
+            "match": {
+              "location": "cucumber\\step_definitions\\careerPage.js:25"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 10,
+            "name": "I want to see the search form",
+            "match": {
+              "location": "cucumber\\step_definitions\\careerPage.js:27"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 12,
+            "name": "I am on the career page",
+            "match": {
+              "location": "cucumber\\step_definitions\\careerPage.js:29"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 13,
+            "name": "I click on the Location filter box",
+            "match": {
+              "location": "cucumber\\step_definitions\\careerPage.js:30"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 14,
+            "name": "I want to see the country: \"Belarus\" in the list",
+            "match": {
+              "location": "cucumber\\step_definitions\\careerPage.js:31"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 15,
+            "name": "I want to see the city: \"Minsk\" in the list",
+            "match": {
+              "location": "cucumber\\step_definitions\\careerPage.js:36"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 17,
+            "name": "I click on the country: \"Belarus\"",
+            "match": {
+              "location": "cucumber\\step_definitions\\careerPage.js:40"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 18,
+            "name": "the \"Belarus\"'s city list gets visible",
+            "match": {
+              "location": "cucumber\\step_definitions\\careerPage.js:41"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 19,
+            "name": "the \"Belarus\"'s city list contains \"Minsk\"",
+            "match": {
+              "location": "cucumber\\step_definitions\\careerPage.js:42"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 21,
+            "name": "I click on the city: \"Minsk\"",
+            "match": {
+              "location": "cucumber\\step_definitions\\careerPage.js:40"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 22,
+            "name": "the dropdown menu closes",
+            "match": {
+              "location": "cucumber\\step_definitions\\careerPage.js:45"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 23,
+            "name": "the \"Minsk\" name is shown in the location field",
+            "match": {
+              "location": "cucumber\\step_definitions\\careerPage.js:46"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 25,
+            "name": "I click on the Skills filter box",
+            "match": {
+              "location": "cucumber\\step_definitions\\careerPage.js:47"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 26,
+            "name": "I want to see the available departments",
+            "match": {
+              "location": "cucumber\\step_definitions\\careerPage.js:48"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 27,
+            "name": "I want to see the given department: \"Software Architecture\"",
+            "match": {
+              "location": "cucumber\\step_definitions\\careerPage.js:49"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 29,
+            "name": "I click on the department: \"Software Architecture\"'s label",
+            "match": {
+              "location": "cucumber\\step_definitions\\careerPage.js:50"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 30,
+            "name": "I want the \"Software Architecture\"'s checkbox to be checked",
+            "match": {
+              "location": "cucumber\\step_definitions\\careerPage.js:51"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 32,
+            "name": "I click on the find button",
+            "match": {
+              "location": "cucumber\\step_definitions\\careerPage.js:52"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 33,
+            "name": "I want to see the job listing page",
+            "match": {
+              "location": "cucumber\\step_definitions\\careerPage.js:53"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 35,
+            "name": "I am on the job listing page",
+            "match": {
+              "location": "cucumber\\step_definitions\\careerPage.js:58"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 36,
+            "name": "I want \"Test Automation Architect\" to be listed",
+            "match": {
+              "location": "cucumber\\step_definitions\\careerPage.js:62"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 37,
+            "name": "I want the position to have the location \"Minsk\" and \"Belarus\"",
+            "match": {
+              "location": "cucumber\\step_definitions\\careerPage.js:68"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 38,
+            "name": "I want the position to have apply button",
+            "match": {
+              "location": "cucumber\\step_definitions\\careerPage.js:75"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 40,
+            "name": "I click on the apply button",
+            "match": {
+              "location": "cucumber\\step_definitions\\careerPage.js:52"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 41,
+            "name": "I want to see the job description page",
+            "match": {
+              "location": "cucumber\\step_definitions\\careerPage.js:80"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 43,
+            "name": "I am on the job description page",
+            "match": {
+              "location": "cucumber\\step_definitions\\careerPage.js:81"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 44,
+            "name": "I want to see the city: \"Minsk\" in the job description",
+            "match": {
+              "location": "cucumber\\step_definitions\\careerPage.js:82"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 45,
+            "name": "I want to see the position: \"Test Automation Architect\" in the job description",
+            "match": {
+              "location": "cucumber\\step_definitions\\careerPage.js:82"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "node_modules\\protractor-cucumber-framework\\lib\\resultsCapturer.js:27"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2000000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

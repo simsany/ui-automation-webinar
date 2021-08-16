@@ -1,6 +1,9 @@
 const { element, browser } = require('protractor')
 const CareerPage = require('../../models/CareerPage.js')
-const page = new CareerPage()
+const JobListingPage = require('../../models/JobListingPage.js')
+const careerPage = new CareerPage()
+const jobListingPage = new JobListingPage()
+const locators = require("../../locators/locators.json")
 const expect = require('chai').expect;
 const EC = protractor.ExpectedConditions;
 const fs = require('fs-extra')
@@ -15,9 +18,16 @@ describe('Pages', () => {
         
         describe('Career page', function () {
             this.timeout(55000);
-            before(function () {
+            before(async function () {
                 this.data = data
-                page.get();
+                careerPage.get();
+                try {
+                    await browser.wait(ec.visibilityOf((element(by.css('.cookie-disclaimer__button')))), 5000);
+                    return await careerPage.acceptCookie();
+                  }
+                  catch (e) {
+                    return console.warn("No accept cookie button!");
+                  }
 
             })
             afterEach(async function(){
@@ -30,51 +40,52 @@ describe('Pages', () => {
                 }
             })
             it('should load', async () => {
-                    expect(page.isLoaded()).eventually.to.be.true;
+                    expect(careerPage.isLoaded()).eventually.to.be.true;
                 });
 
             it('search form should be reachable', async () => {
 
-                    expect(page.isCareerPresent("jobSearchForm")).eventually.to.be.true;
+                    expect(element(locators.jobSearchForm).isPresent()).eventually.to.be.true;
                 });
 
             it('The location filter box should contain City', async()=>{
-                    await browser.wait(EC.presenceOf(element(page.locators.locationSearch)), 5000);
-                    await page.click(page.locators.locationSearch);
-                    expect(page.isCareerPresent("citySelector", data.city)).eventually.to.be.true;
-                    page.selectCity(data.city);
+                    await browser.wait(EC.presenceOf(element(locators.locationSearch)), 5000);
+                    await careerPage.click(locators.locationSearch);
+                    expect(element(careerPage.citySelector(data.city)).isPresent()).eventually.to.be.true;
+                    await careerPage.click(careerPage.countrySelector(data.country))
+                    await careerPage.click(careerPage.citySelector(data.city))
                 });
 
             it('Should have a way to select a skill', async()=>{
-                    expect(page.isCareerPresent("skills")).eventually.to.be.true;
+                    expect(element(locators.skills).isPresent()).eventually.to.be.true;
                 });
 
             it('Should be able to select a specific skill', async () => {
-
-                    await page.selectSkill(data.skill);
-                    const findBtn = await element(page.locators.findBtn);
+                    await careerPage.click(locators.skills)
+                    await careerPage.click(careerPage.skillLocator(data.skill));
+                    const findBtn = await element(locators.find);
                     findBtn.click();
                 });
 
             it('Search result should contain the given position', async function(){
                 await browser.wait(EC.titleIs("Join our Team | EPAM Careers"), 5000);
-                await browser.wait(EC.presenceOf(element(page.locators.searchResultList)), 5000);
-                const resultList = await page.getResultList();
-                this.matchedPositions = await page.getMatchedResults(resultList, data.position);
+                await browser.wait(EC.presenceOf(element(locators.searchResultList)), 5000);
+                const resultList = await jobListingPage.getResultList();
+                this.matchedPositions = await jobListingPage.getMatchedResults(resultList, data.position);
                 expect(this.matchedPositions,`${data.city}\n${this.matchedPositions.length}`).has.length.greaterThan(0);
             });
 
             
             it('Every position should have correct location', async function(){
                 for (let element of this.matchedPositions) {
-                    const location = await page.getLocation(element);
+                    const location = await jobListingPage.getLocation(element);
                     expect(location.toUpperCase()).to.include(data.city.toUpperCase());
                 }
             });
 
             it('Every position should have an apply button', async function(){
                 for (let element of this.matchedPositions){
-                    expect(page.hasElement(element, page.locators.applyBtn)).eventually.to.be.true;
+                    expect(jobListingPage.hasElement(element, locators.apply    )).eventually.to.be.true;
                 }
             });
 

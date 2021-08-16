@@ -1,13 +1,13 @@
 [
-    {"city": "Debrecen","skill": "Software Test Engineering","position": "Test Automation Engineer"
+    {"country":"Hungary","city": "Debrecen","skill": "Software Test Engineering","position": "Test Automation Engineer"
     },
-    {"city": "Minsk","skill": "Software Architecture","position": "Test Automation Architect"
+    {"country":"Belarus","city": "Minsk","skill": "Software Architecture","position": "Test Automation Architect"
     },
-    {"city": "New York, NY","skill": "Sales, Marketing & PR","position": "Test Automation Architect"
+    {"country":"United States","city": "New York, NY","skill": "Sales, Marketing & PR","position": "Test Automation Architect"
     },
-    {"city": "Kyiv","skill": "Sales, Marketing & PR","position": "Client Engagement Manager"
+    {"country":"Ukraine","city": "Kyiv","skill": "Sales, Marketing & PR","position": "Client Engagement Manager"
     },
-    {"city": "Kyiv","skill": "Sales, Marketing & PR","position": "Engagement Manager"
+    {"country":"Ukraine","city": "Kyiv","skill": "Sales, Marketing & PR","position": "Engagement Manager"
     }
 ]
 

@@ -29,7 +29,7 @@ module.exports = class CareerPage extends BasePage {
         return { css: `li[aria-label*='${country}']` }
     }
     citySelector(city) {
-        return { css: `li[id*=${city}]` }
+        return { css: `li[id*="${city}"]` }
     }
     skillLocator(skill) {
         return { xpath: `//label[input[@data-value='${skill}']]` }
