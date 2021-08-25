@@ -5,10 +5,9 @@ const GLOBAL_TIMEOUT = 40e3;
 exports.config = {
     /*seleniumAddress: 'http://127.0.0.1:4444/wd/hub',*/
     specs: 'specs/**/*.spec.js',
-    multiCapabilities: [
-        {'browserName': 'firefox' }, 
+    capabilities:         
         {'browserName': 'chrome'}
-    ],
+    ,
     directConnect:true,
     mochaOpts: {
         reporter: 'spec'

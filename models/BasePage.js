@@ -1,3 +1,4 @@
+const { browser } = require("protractor")
 const locators = require("../locators/locators.json")
 module.exports = class BasePage {
     constructor(url) {
@@ -9,6 +10,8 @@ module.exports = class BasePage {
     }
     click = async function (locator) {
         await browser.actions().mouseMove(element(locator)).perform();
+        await browser.sleep(300)
+        await browser.wait(ec.elementToBeClickable(element(locator)))
         await element(locator).click()
         return this
     }

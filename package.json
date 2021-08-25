@@ -1,5 +1,6 @@
 {
   "name": "ui-automation-webinar",
+  
   "version": "1.0.1",
   "description": "",
   "main": "index.js",
@@ -15,7 +16,7 @@
     "chai": "^4.3.0",
     "chai-as-promised": "^7.1.1",
     "cucumber": "^6.0.5",
-    "mocha": "^8.2.1",
+    "mongoose": "^5.13.8",
     "protractor": "^7.0.0",
     "protractor-cucumber-framework": "^6.2.1",
     "require-it": "^2.0.0",
@@ -23,6 +24,7 @@
   },
   "devDependencies": {
     "fs-extra": "^10.0.0",
+    "mocha": "^8.4.0",
     "selenium-standalone": "^7.1.0"
   }
 }
